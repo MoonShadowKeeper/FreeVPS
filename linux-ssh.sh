@@ -20,10 +20,10 @@ fi
 
 echo "### Install ngrok ###"
 
-wget -q https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-386.tgz
-unzip ngrok-v3-stable-linux-386.tgz
+wget -q https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+sudo tar -xvzf ~/Downloads/ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 chmod +x ./ngrok
-
+ngrok config add-authtoken 2yxG3Pmlz1l9E84KUFdlx8rFmL3_7gWPnJ6A6z6dzypRf6VDV
 echo "### Update user: $USER password ###"
 echo -e "$LINUX_USER_PASSWORD\n$LINUX_USER_PASSWORD" | sudo passwd "$USER"
 
